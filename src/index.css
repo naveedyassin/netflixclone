@@ -1,0 +1,84 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 8%; /* Netflix dark background */
+    --foreground: 0 0% 100%;
+
+    --card: 0 0% 9.5%; /* Netflix card background */
+    --card-foreground: 0 0% 100%;
+
+    --popover: 0 0% 9.5%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 357 92% 47%; /* Netflix red */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 4% 16%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 50%;
+
+    --accent: 240 4% 16%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 357 92% 47%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-netflix-black text-foreground;
+  }
+}
+
+@layer components {
+  .thumbnail-hover {
+    @apply transition-all duration-300 hover:scale-110 hover:z-10 ease-in-out;
+  }
+  
+  .navbar-item {
+    @apply cursor-pointer text-sm text-[#e5e5e5] transition duration-200 hover:text-[#b3b3b3];
+  }
+
+  .navbar-gradient {
+    @apply bg-gradient-to-b from-black/80 to-transparent;
+  }
+
+  .hero-button {
+    @apply flex items-center gap-2 rounded-md py-1.5 px-4 text-lg font-semibold transition;
+  }
+}
+
+@layer utilities {
+  .bg-netflix-black {
+    background-color: #141414;
+  }
+  
+  .bg-netflix-red {
+    background-color: #e50914;
+  }
+  
+  .text-netflix-red {
+    color: #e50914;
+  }
+  
+  .text-netflix-lightgray {
+    color: #8c8c8c;
+  }
+}
